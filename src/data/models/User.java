@@ -1,11 +1,17 @@
 package data.models;
 
+import java.time.LocalDateTime;
+import java.time.temporal.TemporalAccessor;
+
 public class User {
+    public LocalDateTime getDateRegistered;
     private int id;
     private String firstName;
     private String lastName;
     private String username;
     private String passWord;
+
+
 
 
     public int getId() {
@@ -42,6 +48,17 @@ public class User {
 
     public String getPassWord() {
         return passWord;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", username='" + username + '\'' +
+                ", passWord='" + passWord + '\'' +
+                '}';
     }
 
     public void setPassWord(String passWord) {

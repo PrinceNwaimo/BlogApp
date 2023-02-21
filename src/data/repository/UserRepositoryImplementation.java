@@ -71,7 +71,18 @@ public class UserRepositoryImplementation implements UserRepository {
 
     @Override
     public void deleteAll() {
-            users.clear();
-         count = 0;
-        }
+        users.clear();
+        count = 0;
     }
+
+    @Override
+    public User findByUsername(String userName) {
+        for(User user : users){
+            if(user.getUsername().equalsIgnoreCase(userName));
+            return user;
+        } return null;
+    }
+
+
+
+}

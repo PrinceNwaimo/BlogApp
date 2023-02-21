@@ -6,6 +6,9 @@ import java.util.List;
 
 public interface UserRepository {
 
+
+
+
     User save(User user);
 
     User findById(int id);
@@ -19,4 +22,6 @@ public interface UserRepository {
     void delete(int id);
 
     void deleteAll();
+
+    User findByUsername(String userName);
 }
