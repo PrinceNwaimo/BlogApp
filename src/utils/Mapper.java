@@ -1,6 +1,8 @@
 package utils;
 
+import data.models.Article;
 import data.models.User;
+import dto.request.CreateArticleRequest;
 import dto.request.RegisterRequest;
 import dto.responses.FindUserResponse;
 
@@ -30,5 +32,10 @@ public class Mapper {
         response.setUserName(foundUser.getUsername());
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("E,dd/mm/yyyy, hh:mm a");
         response.setDateRegistered(formatter.format(foundUser.getDateRegistered));
+    }
+    public static void map(CreateArticleRequest createArticleRequest, Article article) {
+        article.setBody(createArticleRequest.getBody());
+        article.setTitle(createArticleRequest.getTitle());
+        article.setAuthorID(createArticleRequest.getAuthorID());
     }
 }

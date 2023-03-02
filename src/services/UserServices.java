@@ -11,4 +11,8 @@ public interface UserServices {
     FindUserResponse findUser(int id);
 
     User register(String firstName, String lastName, String userName, String password);
+
+    void delete(User user);
+
+    void delete(int id);
 }

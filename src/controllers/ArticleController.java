@@ -1,2 +1,5 @@
-package controllers;public class ArticleController {
+package controllers;
+
+public class ArticleController {
+
 }
