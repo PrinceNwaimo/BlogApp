@@ -1,10 +1,7 @@
 package africa.semicolon.yarnMeBlog.controllers;
 
 import africa.semicolon.yarnMeBlog.dto.request.RegisterRequest;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import africa.semicolon.yarnMeBlog.services.UserServiceImplementation;
 import africa.semicolon.yarnMeBlog.services.UserServices;
 
@@ -12,7 +9,7 @@ import africa.semicolon.yarnMeBlog.services.UserServices;
 public class UserController {
     private UserServices userService = new UserServiceImplementation();
 
-    @PatchMapping("/register")
+    @PostMapping("/register")
     public Object register(RegisterRequest request) {
         try {
             return userService.register(request);
